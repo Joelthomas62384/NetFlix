@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+body{
+    /* height: 100vh; */
+    background-color: rgb(0,0,0);
+    overflow-x: hidden;
+}
+
+/* Header starts here */
+
+
+header{
+    height: 700px;
+    position: relative;
+
+    
+}
+
+header .banner{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    
+    object-fit: cover;
+    transform: scale(1.25) translateY(-10%);
+    z-index: 0;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.468) 60%, rgba(0, 0, 0, 0.8) 100%);
+    top: 0;
+    
+}
+
+.breaker
+{
+    background-color: rgb(35, 35, 35);
+    height: 7px;
+    width: 100%;
+
+    
+}
+
+nav{
+    position: relative;
+    top: 24px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 60px;
+    user-select: none;
+}
+
+.lang-sign{
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.lang-select{
+    width: 126px;
+    height: 30px;
+    padding: 15px 20px;
+    border: 1px solid #60605f;
+    border-radius: 5px;
+}
+select{
+    position: relative;
+    top: 0;
+    left: -64px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 1;
+    width: 50%;
+    margin-left: 30px;
+}
+
+
+select option{
+    position: absolute;
+    left: -10px;
+    text-align: center;
+    color: black;
+    width: 100%;
+    padding: 20px;
+
+}
+
+.inner-content{
+    position: absolute;
+    width: 100%;
+    top: 3px;
+    left: -15px;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.focused{
+    outline: 2px solid white !important;
+
+}
+
+.btn-red{
+    background-color: rgb(227, 19, 29);
+    color: white;
+    border-radius: 5px;
+    user-select: none;
+    padding: 5px 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    z-index: 1;
+
+}
+
+.btn-red:hover{
+    background-color: rgb(191, 33, 41);
+}
+
+.btn-red:active{
+    background-color: rgb(133, 13, 19);
+}
+
+.btn-sign{
+    font-size: 14px;
+    font-weight: 500;
+    width: 80px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.banner-text{
+    position: relative;
+    top: 34%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1;
+    gap: 14px;
+}
+
+.banner-text h1{
+    font-size: 48px;
+    font-weight: 900;
+    word-spacing: -1px;
+}
+
+.banner-text p{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.form-container{
+margin-top: 6px;
+}
+
+.form-container h3{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
+
+    
+}
+.form-container form{
+    margin-top: 8px;
+    display: flex;
+    width: 100%;;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.input-container input{
+    width: 90%;
+    padding: 1rem 1rem 0.5rem;
+    background-color: rgba(0, 0, 0, 0.209);
+    color: white;
+    border: 1px solid #848482;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    position: relative;
+
+
+}
+
+.form-container .start-btn{
+    width: 50%;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    padding: 14px 24px;
+}
+
+
+
+.input-container{
+    position: relative;
+    width: 90%;
+    display: flex;
+    gap: 8px;
+}
+
+.placeholder{
+    position: absolute;
+    font-size: 16px;
+    user-select: none;
+    transform: translateY(16px) translateX(19px);
+    color: rgba(255, 255, 255, 0.943);
+    transition: all 0.2s ease-in;
+}
+
+.placeholder.active{
+    font-size: 13px;
+    transform: translateX(19px) translateY(6px);
+}
+
+
+/* Sections start here */
+section {
+    height: 60vh;
+    width: 70%;
+    margin: auto;
+    color: white;
+    padding: 50px 30px;
+   
+    /* background-color: #333; For visibility */
+}
+
+.section-container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-section {
+    flex-basis: 50%;
+    display: flex; /* Enables flex properties within this section */
+    justify-content: center; /* Horizontally centers the content */
+    /* align-items: center; Vertically centers the content */
+    height: 100%;
+    flex-direction: column;
+}
+
+.img-section {
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    position: relative;
+}
+
+.text-section h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.img-section img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.img-section video {
+    position: absolute;
+    top: 90px;
+    left: 75px;
+    z-index: 0;
+    max-width: calc(100% - 150px); /* Adjust to fit within the container */
+    height: auto;
+}
+
+
+.order-one{
+    order: 1;
+}
+
+.order-two{
+    order: 2;
+}
+
+
+.download-box{
+    position: absolute;
+    width: 50%;
+    height: 11vh;
+    align-items: center;
+    top: 53%;
+    left: 21%;
+    border: 2px solid rgba(255, 255, 255, 0.369);
+    border-radius: 15px;
+    background-color: black;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    z-index: 2;
+}
+
+
+
+.text-content h3{
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: bolder;
+}
+
+.text-content p{
+    color: rgb(0, 113, 235);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#video3{
+    width: 376px;
+    height: 212px;
+    top: 40px;
+    left: 104px;
+}
